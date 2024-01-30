@@ -3,6 +3,7 @@
 
 <head>
 	<?php
+		include 'conexao.php';
 		include 'header.php';
 	?>
 <body>
@@ -13,7 +14,7 @@
         <?php include 'topo.php' ?>
 
 		<main class="content">
-			<form action="" method="post">
+			<form action="cadastroproduto.php" method="post">
 				<div class="container-fluid p-0">
 
 					<h1 class="h3 mb-3">Cadastro de Produtos</h1>
@@ -21,11 +22,11 @@
 					<div class="row">
 					<div class="mb-3 col-6">
 						<label for="produto" class="form-label">Produto</label>
-						<input type="text" class="form-control" id="produto" placeholder="Digite o nome do produto">
+						<input type="text" class="form-control" id="produto" name="produto" placeholder="Digite o nome do produto">
 					</div>
 					<div class="mb-3 col-6">
 						<label for="descricao" class="form-label">Descrição</label>
-						<textarea class="form-control" id="descricao" rows="3"></textarea>
+						<textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
 					</div>
 					<div class="mb-3">
 						<label for="categoria" class="form-label">Categoria de Produto</label>
@@ -40,9 +41,13 @@
 							<option value="sanduicheesalgado">Sanduiche e Salgado</option>
 						</select>
 					</div>
-					<div class="mb-3">
+					<div class="mb-3 col-6">
 						<label for="estoque" class="form-label">Estoque</label>
 						<input type="number" class="form-control" name="estoque" id="estoque" min="0" max="200" step="1">
+					</div>
+					<div class="mb-3 col-6">
+						<label for="preco" class="form-label">Preço</label>
+						<input type="number" class="form-control" name="preco" id="preco" min="0" max="200" step="1">
 					</div>
 					</div>
 					
